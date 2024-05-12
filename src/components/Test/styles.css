@@ -1,0 +1,41 @@
+.test-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.test-menu-item {
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.test-menu-item:hover {
+    background-color: #e9e9e9;
+}
+
+.test-menu-item a {
+    text-decoration: none;
+    color: #333;
+}
+
+.test-menu-item span {
+    list-style: none;
+    text-decoration: none;
+    color: #333;
+}
+
+.test-menu-item a:hover {
+    text-decoration: underline;
+}
+
+.checkmark {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: green;
+}

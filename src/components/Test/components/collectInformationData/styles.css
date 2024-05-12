@@ -1,0 +1,57 @@
+.csv-table-container {
+    overflow-x: auto;
+    padding: 0; /* Убираем отступы по краям */
+    width: 100%; /* Занимаем всю доступную ширину */
+}
+
+.csv-table-wrapper {
+    overflow-y: auto;
+    width: 100%; /* Занимаем всю доступную ширину */
+}
+
+.csv-table {
+    width: 100%; /* Занимаем всю доступную ширину */
+    border-collapse: collapse;
+}
+
+.full-width-table {
+    max-width: 100%; /* Удаляем максимальную ширину */
+}
+
+
+.csv-table th,
+.csv-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.csv-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.csv-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.csv-table tbody tr:hover {
+    background-color: #ddd;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+.buttons button {
+    padding: 8px 16px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #0056b3;
+}

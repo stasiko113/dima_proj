@@ -1,0 +1,32 @@
+.document-list {
+    list-style: none;
+    padding: 0;
+}
+
+.document-item {
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.document-item:hover {
+    background-color: #e9e9e9;
+}
+
+.document-item span {
+    display: inline-block;
+    color: #333;
+    font-weight: bold;
+}
+
+.document-item a {
+    text-decoration: none;
+    color: #333;
+}
+
+.document-item a:hover {
+    text-decoration: underline;
+}

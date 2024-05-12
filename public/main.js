@@ -1,7 +1,8 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain, dialog, shell } = require('electron')
 
 const path = require('path')
 const isDev = require('electron-is-dev')
+const { writeFile, copyFile } = require('fs').promises
 
 require('@electron/remote/main').initialize()
 
@@ -11,7 +12,9 @@ function createWindow() {
     width: 800,
     height: 600,
     webPreferences: {
+      executablePath: '/Users/enigma/chrome/mac_arm-124.0.6367.201/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing',
       nodeIntegration: true,
+      contextIsolation: false,
       enableRemoteModule: true
     }
   })
@@ -21,6 +24,35 @@ function createWindow() {
       ? 'http://localhost:3000'
       : `file://${path.join(__dirname, '../build/index.html')}`
   )
+
+
+
+  ipcMain.on('save-csv', (event, rows) => {
+    const csvContent = rows.map(row => Object.values(row).join(",")).join("\n");
+    const filePath = path.join(app.getAppPath(), 'data.csv');
+
+    writeFile(filePath, csvContent, 'utf-8', (err) => {
+      if (err) {
+        console.error('Ошибка сохранения файла:', err);
+        event.reply('save-csv-reply', { success: false, error: err });
+        return;
+      }
+      console.log('Файл сохранен успешно:', filePath);
+      event.reply('save-csv-reply', { success: true });
+    });
+  });
+
+  ipcMain.on('request-user-data-path', (event, pdfPath) => {
+    const userDataPath = app.getPath('userData');
+    event.reply('user-data-path', userDataPath, pdfPath);
+  });
+
+  ipcMain.on('open-pdf-file', (event, pdfFileName) => {
+    const pdfFilePath = `file://${path.join(__dirname, '../', pdfFileName)}`;
+    console.log(pdfFilePath)
+
+    shell.openPath(pdfFilePath);
+  });
 }
 
 app.on('ready', createWindow)
