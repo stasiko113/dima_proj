@@ -71,7 +71,7 @@ export const createWordFile = async (headers, rows, filename) => {
     const buffer = await Packer.toBuffer(document);
     const uint8Array = new Uint8Array(buffer);
     await fs.writeFile(filePath, uint8Array);
-    toast.success('Ответ успешно сохранен');
+    toast.success('Ответ успешно сохранен в директорию Документы');
   } catch (err) {
     console.error('Ошибка сохранения ответа:', err);
     toast.error('Ошибка при сохранении ответа');

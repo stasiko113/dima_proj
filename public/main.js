@@ -48,7 +48,7 @@ function createWindow() {
   });
 
   ipcMain.on('open-pdf-file', (event, pdfFileName) => {
-    const pdfFilePath = `file://${path.join(__dirname, '../', pdfFileName)}`;
+    const pdfFilePath = `${path.join(__dirname, '../', pdfFileName)}`;
     console.log(pdfFilePath)
 
     shell.openPath(pdfFilePath);

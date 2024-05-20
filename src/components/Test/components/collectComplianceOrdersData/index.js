@@ -463,13 +463,13 @@ const CollectComplianceOrdersData = () => {
               <td>{row.question}</td>
               <td>{row.grounds}</td>
               <td><input type="checkbox" value={row.pinning}
-                         onChange={(e) => handleChange(index, 'practical', e.target.value, orderOneRows, setOrderOneRows)} />
+                         onChange={(e) => handleChange(index, 'pinning', e.target.value, orderOneRows, setOrderOneRows)} />
               </td>
               <td><input type="text" value={row.regNumber}
-                         onChange={(e) => handleChange(index, 'note', e.target.value, orderOneRows, setOrderOneRows)} />
+                         onChange={(e) => handleChange(index, 'regNumber', e.target.value, orderOneRows, setOrderOneRows)} />
               </td>
               <td><input type="checkbox" value={row.execution}
-                         onChange={(e) => handleChange(index, 'note', e.target.value, orderOneRows, setOrderOneRows)} />
+                         onChange={(e) => handleChange(index, 'execution', e.target.value, orderOneRows, setOrderOneRows)} />
               </td>
             </tr>
           ))}
@@ -485,13 +485,13 @@ const CollectComplianceOrdersData = () => {
               <td>{row.question}</td>
               <td>{row.grounds}</td>
               <td><input type="checkbox" value={row.pinning}
-                         onChange={(e) => handleChange(index, 'practical', e.target.value, orderSecondRows, setOrderSecondRows)} />
+                         onChange={(e) => handleChange(index, 'pinning', e.target.value, orderSecondRows, setOrderSecondRows)} />
               </td>
               <td><input type="text" value={row.regNumber}
-                         onChange={(e) => handleChange(index, 'note', e.target.value, orderSecondRows, setOrderSecondRows)} />
+                         onChange={(e) => handleChange(index, 'regNumber', e.target.value, orderSecondRows, setOrderSecondRows)} />
               </td>
               <td><input type="checkbox" value={row.execution}
-                         onChange={(e) => handleChange(index, 'note', e.target.value, orderSecondRows, setOrderSecondRows)} />
+                         onChange={(e) => handleChange(index, 'execution', e.target.value, orderSecondRows, setOrderSecondRows)} />
               </td>
             </tr>
           ))}
@@ -507,13 +507,13 @@ const CollectComplianceOrdersData = () => {
               <td>{row.question}</td>
               <td>{row.grounds}</td>
               <td><input type="checkbox" value={row.pinning}
-                         onChange={(e) => handleChange(index, 'practical', e.target.value, orderSecondRows, setOrderSecondRows)} />
+                         onChange={(e) => handleChange(index, 'pinning', e.target.value, orderSecondRows, setOrderSecondRows)} />
               </td>
               <td><input type="text" value={row.regNumber}
-                         onChange={(e) => handleChange(index, 'note', e.target.value, orderSecondRows, setOrderSecondRows)} />
+                         onChange={(e) => handleChange(index, 'regNumber', e.target.value, orderSecondRows, setOrderSecondRows)} />
               </td>
               <td><input type="checkbox" value={row.execution}
-                         onChange={(e) => handleChange(index, 'note', e.target.value, orderSecondRows, setOrderSecondRows)} />
+                         onChange={(e) => handleChange(index, 'execution', e.target.value, orderSecondRows, setOrderSecondRows)} />
               </td>
             </tr>
           ))}
@@ -539,13 +539,13 @@ const CollectComplianceOrdersData = () => {
               <td>{row.question}</td>
               <td>{row.grounds}</td>
               <td><input type="checkbox" value={row.pinning}
-                         onChange={(e) => handleChange(index, 'practical', e.target.value, orderSecondRows, setOrderSecondRows)} />
+                         onChange={(e) => handleChange(index, 'pinning', e.target.value, orderSecondRows, setOrderSecondRows)} />
               </td>
               <td><input type="text" value={row.regNumber}
-                         onChange={(e) => handleChange(index, 'note', e.target.value, orderSecondRows, setOrderSecondRows)} />
+                         onChange={(e) => handleChange(index, 'regNumber', e.target.value, orderSecondRows, setOrderSecondRows)} />
               </td>
               <td><input type="checkbox" value={row.execution}
-                         onChange={(e) => handleChange(index, 'note', e.target.value, orderSecondRows, setOrderSecondRows)} />
+                         onChange={(e) => handleChange(index, 'execution', e.target.value, orderSecondRows, setOrderSecondRows)} />
               </td>
             </tr>
           ))}
